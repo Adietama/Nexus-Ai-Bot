@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #080b11;
+  --color-surface: #111622;
+  --color-border-custom: #1f293d;
+  --color-text-custom: #cbd5e1;
+  --color-accent-custom: #3b82f6; /* Premium Cobalt Blue */
+  --color-win-custom: #10b981; /* High Fidelity Emerald */
+  --color-loss-custom: #f43f5e; /* Elegant Rose Slate */
+  --color-warning-custom: #f59e0b; /* Professional Amber */
+  
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+:root {
+  --bg: #080b11;
+  --surface: #111622;
+  --border: #1f293d;
+  --text: #cbd5e1;
+  --accent: #3b82f6;
+  --win: #10b981;
+  --loss: #f43f5e;
+  --warning: #f59e0b;
+  --f-mono: "JetBrains Mono", monospace;
+}
+
+/* Base Styles */
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+
+/* Typography pairing for Display font */
+h1, h2, h3, h4, th, .font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
+}
+
+/* Scrollbar styling for compact density */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Custom UI Components for High Density style */
+.high-density-panel {
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  border-radius: 4px;
+}
+
+.high-density-header {
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid var(--border);
+  color: #8b949e;
+}
+
+.high-density-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  padding: 8px 10px;
+  border-radius: 4px;
+}
+
+.high-density-label {
+  font-size: 10px;
+  color: #8b949e;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.high-density-value {
+  font-family: var(--f-mono);
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 2px;
+}
